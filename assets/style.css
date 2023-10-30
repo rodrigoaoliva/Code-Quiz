@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 25px 0 25px;
+}
+
+.violet-color {
+    color: blueviolet;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+main p {
+    margin: 20px 10px 20px 10px;
+    max-width: 650px;
+    text-align: center;
+}
+
+main button {
+  
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+
+}
