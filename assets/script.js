@@ -178,3 +178,26 @@ viewScores.addEventListener("click", function () {
     highScoresSection.style.display = "block";
 });
 
+clearScoresButton.addEventListener("click", function () {
+    highScores = [];
+    updateHighScoresList();
+});
+
+function updateHighScoresList() {
+    highScores.sort((a, b) => b.score - a.score);
+
+    highScoresList.innerHTML = '';
+
+    highScores.forEach((score, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${index + 1}. ${score.initials} - ${score.score}`;
+        highScoresList.appendChild(listItem);
+    });
+}
+
+function showHighScores() {
+    beginQuizSection.style.display = "none";
+    questionsSection.style.display = "none";
+    scoreSection.style.display = "none";
+    highScoresSection.style.display = "block";
+}
