@@ -4,6 +4,10 @@
     background-color: rgb(231, 231, 231);
 }
 
+main {
+    margin: 0 20px 0 20px;
+}
+
 #header {
     display: flex;
     flex-direction: row;
@@ -17,12 +21,20 @@
     margin: 0 15px 0 15px;
 }
 
-.violet-color {
+.high-scores-button {
     color: rgb(151, 60, 236);
+    cursor: pointer;
+}
+
+#high-scores-list {
+    list-style: none;
+    margin: 20px 0 25px 0;
+
 }
 
 .main-text {
     font-size: 40px;
+    max-width: 700px;
 }
 
 main {
@@ -64,15 +76,8 @@ main button:hover {
     background-color: blueviolet;
 }
 
-.questions div {
-    width: 170px;
-    border-radius: 7px;
-    background-color: rgb(34, 30, 246);
-    color: white;
-    margin: 15px 0 15px 0;
-    padding: 12px 12px 12px 12px;
-    font-size: 20px;
-    cursor: pointer;
+.questions button {
+    margin: 20px 10px 0 0;
 }
 
 .questions div:hover {
@@ -108,5 +113,5 @@ font-size: 37px;
 li {
     font-size: 25px;
     text-align: left;
-    margin: 10px 0 0 -10px;
+    margin: 10px 0 0 -40px;
 }
