@@ -123,3 +123,23 @@ function handleAnswerClick(event) {
                 endGame();
             }
 }
+
+let finalTimerValue = 0;
+
+function startTimer() {
+    const countdown = setInterval(function () {
+        timer--;
+        timerElement.textContent = timer;
+        if (timer <= 0) {
+            clearInterval(countdown);
+            finalTimerValue = timer;
+            endGame();
+        }
+    }, 1000);
+}
+
+function endGame() {
+    questionsSection.style.display = "none";
+    scoreSection.style.display = "block";
+    document.getElementById("final-score").textContent = correctAnswers;
+}
