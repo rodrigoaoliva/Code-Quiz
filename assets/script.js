@@ -201,3 +201,8 @@ function showHighScores() {
     scoreSection.style.display = "none";
     highScoresSection.style.display = "block";
 }
+
+if (scoreSection.style.display === "block") {
+    highScoresSection.style.display = "none";
+}
+
