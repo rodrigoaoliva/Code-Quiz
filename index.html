@@ -5,52 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js"></script>
 </head>
 <body>
     <div id="header">
-        <h2 class="violet-color">View high scores</h2>
-        <h2>Time: 100</h2>
+        <h2 id="view-scores" class="violet-color">View high scores</h2>
+        <h2 id="time">Time: <span id="timer">60</span> seconds</h2>
     </div>
 
     <main>
         
         <section class="begin-quiz">
             <h1 class="main-text">Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
-            answers will penalize your score/time by ten seconds
-            </p>
-            <button>Start Quiz</button>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>
+            <button id="start-quiz">Start Quiz</button>
         </section>
         
-        <section class="questions">
-            <h1 class="main-text">Commonly used data types DO Not include: </h1>
-            <div>1. Strings</div>
-            <div>2. Booleans</div>
-            <div>3. Alerts</div>
-            <div>4. Numbers</div>
-            <p>Wrong!</p>
-        </section> 
+        <section class="questions" style="display: none;">
+            <h1 class="main-text" id="question-text">Commonly used data types DO Not include:</h1>
+            <section id="options">
+                <button data-index="0" class="option">1. Strings</button>
+                <button data-index="1" class="option">2. Booleans</button>
+                <button data-index="2" class="option">3. Alerts</button>
+                <button data-index="3" class="option">4. Numbers</button>
+            </section>
+            <p id="wrong-answer" style="display: none;">Right or wrong!</p>
+        </section>
         
-        <section class="score">
+        <section id="game-over" class="score" style="display: none;">
             <h1 class="main-text">All done!</h1>
-            <p>Your final score is 22</p>
-                <div id="initials-row"> 
-                    <p>Enter initials:</p>
-                    <input>
-                    <button>Submit</button>
-                </div>
+            <p>Your final score is <span id="final-score">22</span></p>
+            <div id="initials-row">
+                <p>Enter initials:</p>
+                <input id="initials" placeholder="Enter your initials"></input>
+                <button id="submit-score">Submit</button>
+            </div>
         </section>
         
-        <section class="high-scores">
+        <section class="high-scores" style="display: none;">
             <h1 class="main-text">High scores</h1>
-            <ol>
-                <li>Name 1</li>
-                <li>Name 2</li>
+            <ol id="high-scores-list">
+                <!-- Place for high scores to appear -->
             </ol>
-            <div id="initials-row">
-                <button>Go back</button>
-                <button>Clear high scores</button>
+            <div id="high-scores-buttons">
+                <button id="go-back">Go back</button>
+                <button id="clear-scores">Clear high scores</button>
             </div>
+        </section>
 
         </section>
     </main>
