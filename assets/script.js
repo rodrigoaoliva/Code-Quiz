@@ -74,3 +74,28 @@ let currentQuestionIndex = 0;
         const clearScoresButton = document.getElementById("clear-scores");
 
         let highScores = []; 
+
+        startQuizButton.addEventListener("click", startQuiz);
+
+        function startQuiz() {
+            beginQuizSection.style.display = "none"; // Hide the "begin-quiz" section
+            questionsSection.style.display = "block";
+            startTimer();
+            showQuestion(currentQuestionIndex);
+        }
+
+        function showQuestion(questionIndex) {
+            const question = questions[questionIndex];
+            questionText.textContent = question.question;
+
+            options.innerHTML = '';
+
+            question.answers.forEach((answer, index) => {
+                const button = document.createElement("button");
+                button.classList.add("option");
+                button.textContent = `${index + 1}. ${answer}`;
+                button.dataset.index = index;
+                button.addEventListener("click", handleAnswerClick);
+                options.appendChild(button);
+            });
+        }
