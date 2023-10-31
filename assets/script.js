@@ -167,3 +167,14 @@ goBackButton.addEventListener("click", function () {
     startQuiz();
 });
 
+
+viewScores.addEventListener("click", function () {
+    timer = 60;
+    timerElement.textContent = timer;
+
+    beginQuizSection.style.display = "none";
+    questionsSection.style.display = "none";
+    scoreSection.style.display = "none";
+    highScoresSection.style.display = "block";
+});
+
