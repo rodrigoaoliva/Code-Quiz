@@ -115,3 +115,23 @@ li {
     text-align: left;
     margin: 10px 0 0 -40px;
 }
+
+@media screen and (max-width:526px) {
+    #header {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:494px) {
+    .begin-quiz {
+        align-items:start;
+    }
+}
+
+
+@media screen and (max-width:494px) {
+        .begin-quiz p {
+            margin: 20px 0 20px 0;
+            text-align: start;
+        }
+}
