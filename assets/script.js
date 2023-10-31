@@ -143,3 +143,27 @@ function endGame() {
     scoreSection.style.display = "block";
     document.getElementById("final-score").textContent = correctAnswers;
 }
+
+
+submitScoreButton.addEventListener("click", function () {
+    const initials = initialsInput.value;
+    if (initials) {
+        const score = {
+            initials: initials,
+            score: correctAnswers
+        };
+        highScores.push(score); 
+        updateHighScoresList(); 
+        showHighScores();
+    }
+});
+
+goBackButton.addEventListener("click", function () {
+    currentQuestionIndex = 0;
+    timer = 60;
+    correctAnswers = 0;
+    highScoresSection.style.display = "none";
+    showQuestion(currentQuestionIndex);
+    startQuiz();
+});
+
